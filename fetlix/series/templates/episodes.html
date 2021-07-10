@@ -1,0 +1,17 @@
+<!Doctype html>
+<html>
+    <style>
+        body > p{
+            color: blue
+        }
+
+    </style>
+    <body>
+        {% for episode in episodes %}
+            <div class="episode__container">
+                <span> {{episode.name}}</a></span>
+                <span> {{episode.number}}</span>
+            </div>
+        {% endfor %}
+    </body>
+</html>
