@@ -5,5 +5,8 @@ from django.views.generic.base import View
 class HelloWorld(View):
 	
 	def get(self, request):
-		return HttpResponse(content=b'Hello World!')
+		context = {
+			'items': list(range(10))
+		}
+		return render(request, 'index.html', context=context)
 		
