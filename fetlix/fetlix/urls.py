@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 
 from series.views import SerieView, EpisodeView
+from users.views import UserView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('series/', SerieView.as_view()),
-    path('episodes/<int:serie_id>/', EpisodeView.as_view(), name='episodes')
+    path('episodes/<int:serie_id>/', EpisodeView.as_view(), name='episodes'),
+    path('login/', UserView.as_view(), name='login'),
 ]
